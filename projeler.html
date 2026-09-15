@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <script>(function(){try{var t=localStorage.getItem("vitren-theme");if(t==="dark"){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projelerimiz | VİTREN Premium Gayrimenkul</title>
+  <meta name="description"
+    content="VİTREN'in Beykoz, Levent ve Bodrum'daki premium gayrimenkul projelerini keşfedin.">
+
+  <link rel="icon" type="image/png" href="assets/images/vitran web logo küçük.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="mainLogo">
+        <img src="assets/images/vitran logo.png" alt="VİTREN Logo" class="brand-logo-img">
+      </a>
+      <nav>
+        <ul class="nav-menu" id="primaryNav">
+          <li><a href="index.html#anasayfa" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="projeler.html" class="nav-link active">Projeler</a></li>
+          <li><a href="index.html#hakkimizda" class="nav-link">Hakkımızda</a></li>
+          <li><a href="index.html#iletisim" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Temayı değiştir">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+        </button>
+        <a href="index.html#iletisim" class="btn btn-primary">Randevu Al</a>
+        <div class="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJELER
+       ========================================================= -->
+  <section class="projects" style="padding-top: calc(var(--header-height) + 5rem);">
+
+    <div class="container">
+
+      <div class="projects-header">
+
+        <div>
+          <div class="section-tag">Portföyümüz</div>
+          <h2 class="section-title">Seçkin Projeler</h2>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="villa">Villa</button>
+          <button class="filter-btn" data-filter="rezidans">Rezidans</button>
+          <button class="filter-btn" data-filter="kiyi">Kıyı Yaşamı</button>
+        </div>
+
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card" data-category="villa" data-id="reserve">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project1.jpg" alt="VİTREN Reserve Villa Projesi">
+            <div class="project-badge">Satışta</div>
+          </div>
+          <div class="project-info">
+            <div class="project-location">
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                <circle cx="12" cy="9" r="2.5"></circle>
+              </svg>
+              <span>Beykoz, İstanbul</span>
+            </div>
+            <h3 class="project-name">VİTREN Reserve</h3>
+            <p class="project-summary">
+              Orman manzarasında müstakil havuzlu, brüt beton ve doğal ahşap
+              detaylı ultra lüks villa kompleksi.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <span class="meta-label">Alan</span>
+                <span class="meta-value">650 m²</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Tip</span>
+                <span class="meta-value">6+2 Villa</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Teslim</span>
+                <span class="meta-value">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-category="rezidans" data-id="tower">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project2.jpg" alt="VİTREN Tower Rezidans">
+            <div class="project-badge">Ön Satış</div>
+          </div>
+          <div class="project-info">
+            <div class="project-location">
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                <circle cx="12" cy="9" r="2.5"></circle>
+              </svg>
+              <span>Levent, İstanbul</span>
+            </div>
+            <h3 class="project-name">VİTREN Tower</h3>
+            <p class="project-summary">
+              Parametrik cephe mimarisi ve 360 derece boğaz panoramasına
+              sahip simge rezidans kulesi.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <span class="meta-label">Alan</span>
+                <span class="meta-value">180-450 m²</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Tip</span>
+                <span class="meta-value">Rezidans</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Teslim</span>
+                <span class="meta-value">2027</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card" data-category="kiyi" data-id="horizon">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project3.jpg" alt="VİTREN Horizon Kıyı Villaları">
+            <div class="project-badge">Son 3 Ünite</div>
+          </div>
+          <div class="project-info">
+            <div class="project-location">
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                <circle cx="12" cy="9" r="2.5"></circle>
+              </svg>
+              <span>Yalıkavak, Bodrum</span>
+            </div>
+            <h3 class="project-name">VİTREN Horizon</h3>
+            <p class="project-summary">
+              Ege denizine sıfır kayalıklarda konsol mimari teknikleriyle
+              tasarlanmış sonsuzluk havuzlu kıyı malikaneleri.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item">
+                <span class="meta-label">Alan</span>
+                <span class="meta-value">520 m²</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Tip</span>
+                <span class="meta-value">Kıyı Malikanesi</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Teslim</span>
+                <span class="meta-value">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-wrapper">
+            <img
+              src="assets/images/vitran beyaz png logo.png"
+              alt="VİTREN Logo"
+              class="footer-logo-img">
+          </a>
+          <p>Yüksek mimari standartlar ve zamansız lüks anlayışıyla geleceğin gayrimenkul projelerini tasarlıyoruz.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigasyon</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+            <li><a href="projeler.html">Projelerimiz</a></li>
+            <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+            <li><a href="index.html#iletisim">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Projeler</h4>
+          <ul class="footer-links">
+            <li><a href="project-reserve.html">VİTREN Reserve</a></li>
+            <li><a href="project-tower.html">VİTREN Tower</a></li>
+            <li><a href="project-horizon.html">VİTREN Horizon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Gizlilik & Yasal</h4>
+          <ul class="footer-links">
+            <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+            <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+            <li><a href="kullanim-sartlari.html">Kullanım Şartları</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 VİTREN Gayrimenkul A.Ş. Tüm Hakları Saklıdır.</p>
+        <p>MARKI LABS Web Design & Development</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

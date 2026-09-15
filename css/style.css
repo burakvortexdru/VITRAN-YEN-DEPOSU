@@ -35,6 +35,114 @@
 }
 
 /* ==========================================================================
+   KOYU TEMA
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --bg-page: #0d0e12;
+  --bg-section-alt: #15161c;
+  --bg-card: #1a1b22;
+  --bg-surface: #1f2028;
+
+  --text-primary: #f5f5f7;
+  --text-secondary: #b7b9c2;
+  --text-muted: #83858f;
+
+  --border-light: #2a2b33;
+  --border-subtle: #24252c;
+}
+
+[data-theme="dark"] .header {
+  background: #0d0e12;
+  border-bottom: 1px solid #2a2b33;
+}
+
+[data-theme="dark"] .header.scrolled {
+  background: rgba(13, 14, 18, 0.96);
+}
+
+[data-theme="dark"] .mobile-toggle span {
+  background: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-menu {
+  background: var(--bg-page);
+  border-left: 1px solid var(--border-light);
+}
+
+[data-theme="dark"] .btn-outline {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .project-filters,
+[data-theme="dark"] .about-experience-badge,
+[data-theme="dark"] .contact-box,
+[data-theme="dark"] .modal-content {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .form-input {
+  background: var(--bg-surface);
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .form-input:focus {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1a1b22;
+}
+
+/* ==========================================================================
+   TEMA DEĞİŞTİRME BUTONU
+   ========================================================================== */
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-brand-red);
+  color: var(--color-brand-red);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+.theme-toggle .theme-icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .theme-icon-moon {
+  display: block;
+}
+
+/* ==========================================================================
    RESET
    ========================================================================== */
 
@@ -469,37 +577,35 @@ p {
 .hero-stats .stat-item {
   position: relative;
   min-width: 150px;
-  padding: 12px 16px 12px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(13, 14, 18, 0.55);
-  border-radius: 6px;
-  backdrop-filter: blur(4px);
+  padding: 2px 0 2px 22px;
+  border: none;
+  background: transparent;
 }
 
 /* Kırmızı mimari çizgi */
 .hero-stats .stat-item::before {
   content: '';
   position: absolute;
-  left: 10px;
-  top: 12px;
-  width: 4px;
-  height: calc(100% - 24px);
+  left: 0;
+  top: 2px;
+  width: 3px;
+  height: 54px;
   background: var(--color-brand-red);
 }
 
 /* Sayılar */
 .hero-stats .stat-number {
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 900;
   line-height: 1;
   color: #ffffff;
 
-  letter-spacing: -0.035em;
-  margin-bottom: 9px;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
 
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.7),
-    0 5px 14px rgba(0, 0, 0, 0.35);
+    0 2px 6px rgba(0, 0, 0, 0.8),
+    0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
 /* Açıklamalar */
@@ -508,12 +614,12 @@ p {
   font-weight: 800;
   line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.08em;
   color: #ffffff;
 
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.7),
-    0 4px 10px rgba(0, 0, 0, 0.3);
+    0 2px 5px rgba(0, 0, 0, 0.8),
+    0 5px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================
@@ -1033,14 +1139,14 @@ textarea.form-input {
 }
 
 .footer-brand p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
   max-width: 300px;
   font-weight: 400;
 }
 
 .footer-title {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1055,7 +1161,7 @@ textarea.form-input {
 }
 
 .footer-links a {
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   color: rgba(255, 255, 255, 0.85);
   transition: var(--transition-fast);
 }
@@ -1071,7 +1177,7 @@ textarea.form-input {
   align-items: center;
   padding-top: 2.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #ffffff;
 }
 
@@ -1270,14 +1376,14 @@ textarea.form-input {
   .hero-stats .stat-item {
     flex: 1;
     min-width: 0;
-    padding: 10px 12px 10px 20px;
+    padding: 2px 0 2px 16px;
   }
 
   .hero-stats .stat-item::before {
-    left: 8px;
-    top: 10px;
+    left: 0;
+    top: 2px;
     width: 3px;
-    height: calc(100% - 20px);
+    height: 42px;
   }
 
   .hero-stats .stat-number {
