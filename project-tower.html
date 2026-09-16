@@ -14,6 +14,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" id="mainLogo">
@@ -32,7 +33,7 @@
           <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
           <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
         </button>
-        <a href="index.html#iletisim" class="btn btn-primary">Randevu Al</a>
+        <button type="button" class="btn btn-primary btn-appointment-trigger" data-project="VİTREN Tower — Levent">Randevu Al</button>
         <div class="mobile-toggle" aria-label="Menüyü Aç/Kapat">
           <span></span><span></span><span></span>
         </div>
@@ -40,70 +41,305 @@
     </div>
   </header>
 
-  <section class="about" style="padding-top: calc(var(--header-height) + 4rem);">
+  <!-- 1. PREMIUM HERO BANNER -->
+  <section class="project-hero-banner" style="background-image: url('assets/images/projects/tower/tower-hero.jpg');">
     <div class="container">
-      <div class="about-grid">
+      <div class="project-hero-location">
+        <svg viewBox="0 0 24 24" style="width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2;"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+        Levent, İstanbul • Ön Satış
+      </div>
+      <h1 class="project-hero-title">VİTREN Tower</h1>
+      <p class="project-hero-desc">
+        Parametrik cephe mimarisi ve 360 derece boğaz panoramasına sahip simge rezidans kulesi. Levent'in merkezinde yükselen prestijli şehir yaşamı.
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary btn-appointment-trigger" data-project="VİTREN Tower — Levent">
+          Randevu Al
+        </button>
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20Tower%20projesi%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
+           target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.4); background: rgba(13,14,18,0.5);">
+          WhatsApp'tan Bilgi Al
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div class="about-img-container">
-          <div class="about-img-frame">
-            <img src="assets/images/project2.jpg" alt="VİTREN Tower Rezidans">
+  <!-- 2. PROJE ÖZETİ (SPECS BAR) -->
+  <section style="padding: 2.5rem 0; background: var(--bg-card); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="specs-grid" style="margin: 0;">
+        <div class="spec-box">
+          <div class="spec-box-label">Alan</div>
+          <div class="spec-box-value">180 - 450 m²</div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-label">Tip</div>
+          <div class="spec-box-value">Rezidans & Penthouse</div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-label">Teslim</div>
+          <div class="spec-box-value">2027</div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-label">Portföy</div>
+          <div class="spec-box-value">84 Özel Rezidans</div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-label">Manzara</div>
+          <div class="spec-box-value">360° Boğaz & Şehir</div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-label">Hizmetler</div>
+          <div class="spec-box-value">7/24 Özel Concierge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROJE HİKAYESİ -->
+  <section class="project-story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <div class="section-tag">Dikey Mimari & Şehir Yaşamı</div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); margin-top: 0.5rem; margin-bottom: 1.25rem;">
+            İstanbul Silüetine Yön Veren Dikey Mimari İkonu
+          </h2>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            VİTREN Tower, İstanbul finans ve iş dünyasının merkez üssü Levent'te, aerodinamik ve parametrik cephe mühendisliğiyle yükseliyor. Güneş ışığını ve rüzgar açılarını optimize eden cam paneller, binaya dinamik bir estetik kazandırır.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            Tüm rezidans ve penthouse katlarında sunulan kesintisiz 360 derece Boğaz panoraması, özel concierge servisi, helipad erişimi ve executive kulüp alanları ile dikey yaşam standartlarını yeniden tanımlıyor.
+          </p>
+          <div class="story-quote">
+            "VİTREN Tower’da her sabah Boğaz köprülerinin ve şehir silüetinin eşsiz manzarasına uyanırsınız."
           </div>
-          <div class="about-experience-badge">
-            <div class="about-exp-num">2027</div>
-            <div class="about-exp-txt">Tahmini Teslim</div>
+        </div>
+        <div>
+          <img src="assets/images/projects/tower/tower-01.jpg" alt="VİTREN Tower Penthouse Boğaz Manzarası" style="width:100%; border-radius:12px; border:1px solid var(--border-light); box-shadow: var(--shadow-medium);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ÖZELLİKLER (MİNİMAL SVG İKONLAR) -->
+  <section style="padding: 4.5rem 0; background: var(--bg-page); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-tag">Ayrıcalıklar & Donanım</div>
+      <h2 style="margin-bottom: 2rem;">Rezidans Standartları</h2>
+      
+      <div class="features-list">
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          360° Boğaz & İstanbul Panoraması
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          Kapalı Yüzme Havuzu ve SPA & Wellness
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          Özel Helipad ve VIP Transfer Servisi
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Executive Lounge ve Toplantı Salonları
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          Valet Parking ve 7/24 Özel Concierge Hizmeti
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"></path></svg>
+          Akıllı İklimlendirme ve Yüksek Akustik Ses Yalıtımı
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. GALERİ (SADECE TOWER GÖRSELLERİ) -->
+  <section style="padding: 5rem 0; background: var(--bg-section-alt); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <div class="section-tag">Görsel Tur</div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem);">Şehrin İçindeki Yaşam</h2>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Levent'in kalbinde yükselen VİTREN Tower rezidanslarının mimari ve iç mekan görselleri.</p>
+      </div>
+
+      <div class="project-detail-grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem;">
+        <!-- Ana Görsel -->
+        <div>
+          <div class="project-gallery-main" style="height: 440px; cursor: pointer;">
+            <img src="assets/images/projects/tower/tower-hero.jpg" id="mainGalleryImg" alt="VİTREN Tower Rezidans Kulesi" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" loading="eager">
           </div>
         </div>
 
-        <div class="about-content">
-          <div class="section-tag">Levent, İstanbul</div>
-          <h2>VİTREN Tower</h2>
-          <p>
-            Parametrik cephe mimarisi ve 360 derece boğaz panoramasına sahip simge
-            rezidans kulesi. VİTREN Tower, şehrin merkezinde yükselen mimari bir
-            heykel olarak, günlük yaşamı ayrıcalıklı bir deneyime dönüştürür.
-          </p>
-          <p>
-            Farklı metrekare seçenekleriyle tekli profesyonellerden ailelere kadar
-            geniş bir yaşam tarzına hitap eden esnek daire tipolojileri sunar.
+        <!-- Thumbnail Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; height: 440px;">
+          <div class="thumb-item active" style="width:100%; height:214px;"><img src="assets/images/projects/tower/tower-hero.jpg" alt="VİTREN Tower 1" loading="lazy"></div>
+          <div class="thumb-item" style="width:100%; height:214px;"><img src="assets/images/projects/tower/tower-01.jpg" alt="VİTREN Tower Penthouse" loading="lazy"></div>
+          <div class="thumb-item" style="width:100%; height:214px;"><img src="assets/images/projects/tower/tower-02.jpg" alt="VİTREN Tower Lobi" loading="lazy"></div>
+          <div class="thumb-item" style="width:100%; height:214px;"><img src="assets/images/projects/tower/tower-03.jpg" alt="VİTREN Tower Kapalı Havuz" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. KAT PLANI / PLANLAR -->
+  <section style="padding: 4.5rem 0; background: var(--bg-card); border-bottom: 1px solid var(--border-light);">
+    <div class="container" style="text-align: center; max-width: 780px;">
+      <div class="section-tag">Mimari Yerleşim</div>
+      <h2 style="margin-bottom: 1rem;">Rezidans Kat Planları & Ön Satış Sunumu</h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        180 m² ile 450 m² arasında değişen geniş penthouse ve rezidans kat planlarını incelemek için özel sunum randevusu oluşturabilirsiniz.
+      </p>
+      <button type="button" class="btn btn-primary btn-appointment-trigger" data-project="VİTREN Tower — Levent">
+        Özel Sunum İçin Randevu Al
+      </button>
+    </div>
+  </section>
+
+  <!-- 7. KONUM & ULAŞIM -->
+  <section class="location-section">
+    <div class="container">
+      <div class="location-grid">
+        <div>
+          <div class="section-tag">Konum & Ulaşım</div>
+          <h2 style="margin-bottom: 1rem;">Levent Finans Merkezinde Simge Yapı</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            VİTREN Tower, İstanbul finans ve iş dünyasının kalbi Levent Büyükdere Caddesi üzerinde konumlanmaktadır. Metro istasyonuna doğrudan erişim ve AVM'lere yürüme mesafesindedir.
           </p>
 
-          <div class="about-pillars">
-            <div class="pillar-item">
-              <h4>Alan</h4>
-              <p>180-450 m²</p>
+          <div class="distance-list">
+            <div class="distance-item">
+              <span class="distance-name">Kanyon & Özdilek AVM</span>
+              <span class="distance-val">3 Dakika Yürüme</span>
             </div>
-            <div class="pillar-item">
-              <h4>Tip</h4>
-              <p>Rezidans</p>
+            <div class="distance-item">
+              <span class="distance-name">Levent Metro İstasyonu</span>
+              <span class="distance-val">Direkt Bağlantı</span>
             </div>
-            <div class="pillar-item">
-              <h4>Manzara</h4>
-              <p>360° boğaz panoraması</p>
+            <div class="distance-item">
+              <span class="distance-name">15 Temmuz Şehitler Köprüsü</span>
+              <span class="distance-val">7 Dakika</span>
             </div>
-            <div class="pillar-item">
-              <h4>Sosyal Yaşam</h4>
-              <p>Ortak kat, spa & fitness</p>
-            </div>
-            <div class="pillar-item">
-              <h4>Concierge</h4>
-              <p>7/24 özel hizmet</p>
-            </div>
-            <div class="pillar-item">
-              <h4>Güvenlik</h4>
-              <p>7/24 özel güvenlik</p>
+            <div class="distance-item">
+              <span class="distance-name">İstanbul Havalimanı</span>
+              <span class="distance-val">30 Dakika</span>
             </div>
           </div>
+        </div>
 
-          <a href="index.html#iletisim" class="btn btn-primary" style="margin-top: 2.5rem;">
-            Katalog ve Bilgi Al
-            <span class="btn-arrow">→</span>
+        <div style="background: var(--bg-section-alt); border-radius: 12px; padding: 2.25rem; border: 1px solid var(--border-light); text-align: center;">
+          <h3 style="margin-bottom: 1rem;">Bu Proje Hakkında Bilgi Almak İstiyorum</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            VIP Müşteri Danışmanımız VİTREN Tower projesine dair ön satış fiyat listesini size ulaştırsın.
+          </p>
+          <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20Tower%20projesi%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
+             target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+            WhatsApp İle Anında İletişime Geç
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROJE CTA BANNER -->
+  <section style="padding: 5rem 0; background: var(--color-brand-black); color: #ffffff; text-align: center;">
+    <div class="container" style="max-width: 720px;">
+      <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); color: #ffffff; margin-bottom: 1rem;">
+        VİTREN Yaşamını Yakından Keşfedin
+      </h2>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem;">
+        Size en uygun seçenekleri görüşmek ve özel sunum almak için randevu talebinizi oluşturun.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary btn-appointment-trigger" data-project="VİTREN Tower — Levent" style="padding: 12px 32px;">
+          Randevu Al
+        </button>
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20Tower%20projesi%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
+           target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.3); padding: 12px 32px;">
+          WhatsApp'tan Bilgi Al
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. BENZER PROJELER -->
+  <section class="similar-projects-section">
+    <div class="container">
+      <div class="section-tag">Portföyümüz</div>
+      <h2 style="margin-bottom: 2.5rem;">Diğer VİTREN Projeleri</h2>
+
+      <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+        
+        <!-- RESERVE CARD -->
+        <div class="project-card" data-category="villa" data-id="reserve">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/reserve/reserve-hero.jpg" alt="VİTREN Reserve Villa" loading="lazy">
+            <div class="project-badge">Satışta</div>
+          </div>
+          <div class="project-info">
+            <div class="project-location">
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+              <span>Beykoz, İstanbul</span>
+            </div>
+            <h3 class="project-name">VİTREN Reserve</h3>
+            <p class="project-summary">
+              Orman manzarasında müstakil havuzlu, brüt beton ve doğal ahşap detaylı ultra lüks villa kompleksi.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item"><span class="meta-label">Alan</span><span class="meta-value">650 m²</span></div>
+              <div class="meta-item"><span class="meta-label">Tip</span><span class="meta-value">6+2 Villa</span></div>
+              <div class="meta-item"><span class="meta-label">Teslim</span><span class="meta-value">2026</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HORIZON CARD -->
+        <div class="project-card" data-category="kiyi" data-id="horizon">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/horizon/horizon-hero.jpg" alt="VİTREN Horizon Kıyı Villaları" loading="lazy">
+            <div class="project-badge">Son 3 Ünite</div>
+          </div>
+          <div class="project-info">
+            <div class="project-location">
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+              <span>Yalıkavak, Bodrum</span>
+            </div>
+            <h3 class="project-name">VİTREN Horizon</h3>
+            <p class="project-summary">
+              Ege denizine sıfır kayalıklarda konsol mimari teknikleriyle tasarlanmış sonsuzluk havuzlu kıyı malikaneleri.
+            </p>
+            <div class="project-meta">
+              <div class="meta-item"><span class="meta-label">Alan</span><span class="meta-value">520 m²</span></div>
+              <div class="meta-item"><span class="meta-label">Tip</span><span class="meta-value">Kıyı Malikanesi</span></div>
+              <div class="meta-item"><span class="meta-label">Teslim</span><span class="meta-value">2026</span></div>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-label="Görsel Galerisi">
+    <div class="lightbox-topbar">
+      <div class="lightbox-counter" id="lightboxCounter">1 / 5</div>
+      <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Kapat">&times;</button>
+    </div>
+    <div class="lightbox-main-stage">
+      <button type="button" class="lightbox-arrow lightbox-arrow-prev" id="lightboxPrev" aria-label="Önceki Görsel">&#10094;</button>
+      <img src="" id="lightboxImg" alt="Tam Ekran Görsel">
+      <button type="button" class="lightbox-arrow lightbox-arrow-next" id="lightboxNext" aria-label="Sonraki Görsel">&#10095;</button>
+    </div>
+    <div class="lightbox-thumbs-strip" id="lightboxThumbs"></div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -146,7 +382,20 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp'tan Bilgi Al">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662a11.87 11.87 0 005.71 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-text">WhatsApp’tan Bilgi Al</span>
+  </a>
+
   <script src="js/main.js"></script>
+  <script src="js/extensions.js"></script>
 </body>
 
 </html>

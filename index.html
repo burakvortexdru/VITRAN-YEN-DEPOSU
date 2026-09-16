@@ -20,86 +20,400 @@
 
   <style>
     /* =========================================================
-       HERO YAZI OKUNABİLİRLİĞİ
+       LUXURY PROPERTY BROCHURE & EDITORIAL HERO
        ========================================================= */
-
-    .hero-content {
+    .hero {
       position: relative;
-      z-index: 5;
+      background-color: #f5f3ef;
+      min-height: 800px;
+      max-height: 860px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: calc(var(--header-height) + 1rem);
+      padding-bottom: 1.5rem;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(13, 14, 18, 0.08);
     }
 
-    .hero .section-tag {
+    /* Subtle Architectural Grid Lines in Background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(13, 14, 18, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(13, 14, 18, 0.025) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 45% 55%;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* LEFT CONTENT AREA */
+    .hero-text-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 1rem;
+    }
+
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      width: fit-content;
-      padding: 8px 14px;
-      margin-bottom: 22px;
-
-      color: #ffffff;
-      background: rgba(13, 14, 18, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-
-      font-size: 13px;
+      gap: 8px;
+      margin-bottom: 20px;
+      color: #737983;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
+      animation: heroFadeUp 0.6s ease forwards;
+    }
 
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    .hero-title-wrapper {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 18px;
+      border-left: 2px solid var(--color-brand-red);
     }
 
     .hero-title {
-      color: #ffffff !important;
-      font-weight: 700;
-      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.48);
+      color: #0d0e12 !important;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(2.8rem, 4.2vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin: 0;
+      animation: heroFadeUp 0.7s ease 0.1s forwards;
     }
 
     .hero-title .text-red {
       color: #d3121d !important;
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+      font-weight: 700;
     }
 
     .hero-subtitle {
-      max-width: 700px;
-
-      color: #f1f1f1 !important;
-
-      font-size: 18px;
-      line-height: 1.75;
-      font-weight: 450;
-
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+      max-width: 420px;
+      color: #4b5563 !important;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      animation: heroFadeUp 0.8s ease 0.2s forwards;
     }
 
+    /* CTAs */
     .hero-actions {
-      position: relative;
-      z-index: 6;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      animation: heroFadeUp 0.9s ease 0.3s forwards;
     }
 
-    .hero-stats-wrapper {
-      position: relative;
-      z-index: 6;
+    .hero-actions .btn-primary {
+      background: var(--color-brand-red);
+      color: #ffffff;
+      border: 1px solid var(--color-brand-red);
+      width: 170px;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+      box-shadow: none;
     }
 
-    /* MOBİL */
+    .hero-actions .btn-primary:hover {
+      background: #b50e18;
+      border-color: #b50e18;
+    }
+
+    .hero-actions .btn-outline {
+      color: #0d0e12;
+      border: 1px solid #0d0e12;
+      background: transparent;
+      width: 150px;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+
+    .hero-actions .btn-outline:hover {
+      background: #0d0e12;
+      color: #ffffff;
+    }
+
+    /* MINIMAL EDITORIAL PROPERTY STATS LINE */
+    .hero-stats-line {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(13, 14, 18, 0.1);
+      animation: heroFadeUp 1s ease 0.4s forwards;
+    }
+
+    .hero-stat-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat-num {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0d0e12;
+      line-height: 1;
+    }
+
+    .hero-stat-txt {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #737983;
+      margin-top: 2px;
+    }
+
+    .hero-stat-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(13, 14, 18, 0.12);
+    }
+
+    /* RIGHT PHOTO SIDE WITH FEATURED CARD & NUMBERING */
+    .hero-photo-wrapper {
+      position: relative;
+      width: 100%;
+      height: 560px;
+      border-radius: 3px;
+      overflow: hidden;
+      animation: heroFadeIn 1s ease forwards;
+    }
+
+    .hero-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Property Number Badge (Top Right) */
+    .hero-photo-number {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(13, 14, 18, 0.75);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      padding: 6px 14px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      border-radius: 2px;
+      z-index: 3;
+    }
+
+    /* Featured Property Card (Bottom Right / Corner) */
+    .hero-featured-card {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: #ffffff;
+      border: 1px solid rgba(13, 14, 18, 0.08);
+      padding: 16px 20px;
+      border-radius: 3px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      z-index: 3;
+      max-width: 280px;
+    }
+
+    .hero-featured-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--color-brand-red);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .hero-featured-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0d0e12;
+      margin: 0 0 2px 0;
+    }
+
+    .hero-featured-sub {
+      font-size: 0.72rem;
+      color: #737983;
+      margin-bottom: 8px;
+    }
+
+    .hero-featured-link {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #0d0e12;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .hero-featured-link:hover {
+      color: var(--color-brand-red);
+    }
+
+    /* EDITORIAL FOOTER STRIP */
+    .hero-footer-strip {
+      width: 100%;
+      max-width: 1320px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1rem 2rem 0 2rem;
+      border-top: 1px solid rgba(13, 14, 18, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #737983;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-footer-strip a {
+      color: #737983;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .hero-footer-strip a:hover {
+      color: #0d0e12;
+    }
+
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* RESPONSIVE DESIGN (TABLET & MOBILE) */
+    @media (max-width: 1024px) {
+      .hero {
+        min-height: auto;
+        max-height: none;
+        padding-top: calc(var(--header-height) + 1.5rem);
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-text-side {
+        padding-right: 0;
+      }
+
+      .hero-photo-wrapper {
+        height: 440px;
+      }
+
+      .hero-footer-strip {
+        margin-top: 2rem;
+      }
+    }
+
     @media (max-width: 768px) {
+      .hero {
+        padding-top: calc(var(--header-height) + 1rem);
+      }
 
-      .hero .section-tag {
-        font-size: 11px;
-        padding: 7px 11px;
-        margin-bottom: 17px;
+      .hero-container {
+        padding: 0 1.25rem;
       }
 
       .hero-title {
-        text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
+        font-size: 2.2rem;
       }
 
       .hero-subtitle {
-        font-size: 16px;
-        line-height: 1.65;
+        font-size: 0.92rem;
+        margin-bottom: 1.5rem;
       }
 
-      .hero-stats .stat-label {
-        font-size: 11px;
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+
+      .hero-actions .btn-primary,
+      .hero-actions .btn-outline {
+        width: 100%;
+      }
+
+      .hero-stats-line {
+        justify-content: space-between;
+      }
+
+      .hero-photo-wrapper {
+        height: 360px;
+      }
+
+      .hero-featured-card {
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        max-width: none;
+      }
+
+      .hero-footer-strip {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 1rem 1.25rem 0 1.25rem;
       }
     }
   </style>
@@ -171,74 +485,96 @@
 
 
   <!-- =========================================================
-       HERO
+       LUXURY PROPERTY BROCHURE & EDITORIAL HERO
        ========================================================= -->
   <section class="hero" id="anasayfa">
+    <div class="hero-container">
 
-    <div class="hero-bg">
-      <img src="assets/images/hero.jpg" alt="VİTREN Modern İkonik Mimari">
-    </div>
+      <!-- SOL / ORTA: METİN VE MARKA İÇERİĞİ (45%) -->
+      <div class="hero-text-side">
 
-    <div class="hero-overlay"></div>
+        <div class="hero-eyebrow">
+          <span>VİTREN REAL ESTATE</span>
+          <span>•</span>
+          <span>PREMIUM RESIDENCES</span>
+        </div>
 
-    <div class="container hero-content">
+        <div class="hero-title-wrapper">
+          <h1 class="hero-title">
+            Geleceğin Mimarisinde
+            <br>
+            <span class="text-red">Yaşam Sanatı.</span>
+          </h1>
+        </div>
 
-      <div class="section-tag">
-        İkonik Mimari Mentalite
+        <p class="hero-subtitle">
+          Özgün mimari, ileri mühendislik ve seçkin yaşam alanlarını tek bir vizyonda buluşturuyoruz.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projeler.html" class="btn btn-primary">
+            PROJELERİ KEŞFET
+          </a>
+
+          <a href="javascript:void(0)" onclick="openAppointmentModal()" class="btn btn-outline">
+            ÖZEL GÖRÜŞME
+          </a>
+        </div>
+
+        <!-- MINIMAL EDITORIAL PROPERTY STATS LINE -->
+        <div class="hero-stats-line">
+          <div class="hero-stat-box">
+            <span class="hero-stat-num">03</span>
+            <span class="hero-stat-txt">Aktif Proje</span>
+          </div>
+
+          <div class="hero-stat-divider"></div>
+
+          <div class="hero-stat-box">
+            <span class="hero-stat-num">150+</span>
+            <span class="hero-stat-txt">Yaşam Alanı</span>
+          </div>
+
+          <div class="hero-stat-divider"></div>
+
+          <div class="hero-stat-box">
+            <span class="hero-stat-num">03</span>
+            <span class="hero-stat-txt">Seçkin Lokasyon</span>
+          </div>
+        </div>
+
       </div>
 
-      <h1 class="hero-title">
-        Geleceğin Mimarisinde
-        <br>
-        <span class="text-red">Yaşam Sanatı.</span>
-      </h1>
+      <!-- SAĞ: BÜYÜK MİMARİ GÖRSEL (55%) -->
+      <div class="hero-photo-wrapper">
+        
+        <div class="hero-photo-number">01 / 03</div>
 
-      <p class="hero-subtitle">
-        VİTREN, sıradanlığın ötesine geçen mimari estetiği, zamansız lüksü ve
-        çevreyle uyumlu mühendislik çözümlerini prestijli projelerinde
-        buluşturuyor.
-      </p>
+        <img src="assets/images/hero.jpg" alt="VİTREN Modern Mimari Proje" fetchpriority="high" loading="eager" width="1920" height="1080">
 
-      <div class="hero-actions">
-
-        <a href="projeler.html" class="btn btn-primary">
-          Projeleri Keşfet
-          <span class="btn-arrow">→</span>
-        </a>
-
-        <a href="#hakkimizda" class="btn btn-outline">
-          Mimari Felsefemiz
-        </a>
-
-      </div>
-
-      <!-- HERO STATS -->
-      <div class="hero-stats-wrapper">
-
-        <div class="hero-stats">
-
-          <div class="stat-item">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Aktif İkonik Proje</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">%100</div>
-            <div class="stat-label">Özgün Mühendislik</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">+150</div>
-            <div class="stat-label">A-Plus Yaşam Alanı</div>
-          </div>
-
+        <!-- FEATURED PROPERTY LABEL -->
+        <div class="hero-featured-card">
+          <span class="hero-featured-tag">FEATURED PROPERTY</span>
+          <h3 class="hero-featured-title">VİTREN RESERVE</h3>
+          <div class="hero-featured-sub">BEYKOZ · İSTANBUL</div>
+          <a href="project-reserve.html" class="hero-featured-link">
+            Detayları İncele →
+          </a>
         </div>
 
       </div>
 
     </div>
 
+    <!-- EDITORIAL FOOTER STRIP -->
+    <div class="hero-footer-strip">
+      <span>VİTREN · PREMIUM REAL ESTATE</span>
+      <span>BEYKOZ · LEVENT · BODRUM</span>
+      <a href="#hakkimizda">SCROLL TO EXPLORE ↓</a>
+    </div>
+
   </section>
+
 
 
   <!-- =========================================================
@@ -331,7 +667,7 @@
 
           <div class="project-img-wrapper">
 
-            <img src="assets/images/project1.jpg"
+            <img src="assets/images/projects/reserve/reserve-hero.jpg"
               alt="VİTREN Reserve Villa Projesi">
 
             <div class="project-badge">
@@ -391,7 +727,7 @@
 
           <div class="project-img-wrapper">
 
-            <img src="assets/images/project2.jpg"
+            <img src="assets/images/projects/tower/tower-hero.jpg"
               alt="VİTREN Tower Rezidans">
 
             <div class="project-badge">
@@ -451,7 +787,7 @@
 
           <div class="project-img-wrapper">
 
-            <img src="assets/images/project3.jpg"
+            <img src="assets/images/projects/horizon/horizon-hero.jpg"
               alt="VİTREN Horizon Kıyı Villaları">
 
             <div class="project-badge">
@@ -1123,10 +1459,244 @@
   </div>
 
 
+  <!-- CENTRAL MERKEZİ RANDEVU SİSTEMİ MODALI -->
+  <div class="appointment-modal" id="appointmentModal">
+    <div class="appointment-card">
+      <div class="appointment-header">
+        <div>
+          <h3 style="margin: 0; font-size: 1.25rem;">Randevu Talebi Oluştur</h3>
+          <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: var(--text-muted);">Size en uygun seçenekleri görüşmek için randevu talebinizi oluşturun.</p>
+        </div>
+        <span class="appointment-close" id="appointmentClose">&times;</span>
+      </div>
+
+      <form id="centralAppointmentForm" class="appointment-body" style="padding: 1.5rem 2rem;">
+        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Ad Soyad *</label>
+            <input type="text" class="form-input" id="appntName" required placeholder="Ahmet Yılmaz">
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Telefon *</label>
+            <input type="tel" class="form-input" id="appntPhone" required placeholder="0532 000 00 00">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">E-posta *</label>
+          <input type="email" class="form-input" id="appntEmail" required placeholder="ahmet@example.com">
+        </div>
+
+        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">İlgilendiğiniz Proje *</label>
+            <select class="form-input" id="appntProject" required>
+              <option value="Genel VİTREN Bilgilendirme">Genel VİTREN Bilgilendirme</option>
+              <option value="VİTREN Reserve — Beykoz">VİTREN Reserve — Beykoz</option>
+              <option value="VİTREN Tower — Levent">VİTREN Tower — Levent</option>
+              <option value="VİTREN Horizon — Yalıkavak / Bodrum">VİTREN Horizon — Yalıkavak / Bodrum</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Görüşme Türü *</label>
+            <select class="form-input" id="appntType" required>
+              <option value="Merkez Showroom">Merkez Showroom</option>
+              <option value="Online Görüşme">Online Görüşme</option>
+              <option value="Telefon Görüşmesi">Telefon Görüşmesi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Tarih *</label>
+            <input type="date" class="form-input" id="appntDate" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Saat *</label>
+            <select class="form-input" id="appntTime" required>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00" selected>10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Notunuz</label>
+          <textarea class="form-input" id="appntNote" rows="2" placeholder="Varsa eklemek istediğiniz özel istek veya sorularınız..."></textarea>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: var(--text-secondary); cursor: pointer;">
+            <input type="checkbox" id="appntKvkk" required style="margin-top: 2px;">
+            <span>Randevu talebim kapsamında verdiğim iletişim bilgilerimin benimle iletişime geçilmesi amacıyla kullanılmasını kabul ediyorum. *</span>
+          </label>
+        </div>
+
+        <div id="appntStatusMsg" style="display: none; margin-bottom: 1rem; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500;"></div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+          <button type="button" class="btn btn-outline" id="appntCancelBtn" style="padding: 8px 18px; font-size: 0.85rem;">İptal</button>
+          <button type="submit" class="btn btn-primary" id="appntSubmitBtn" style="padding: 8px 24px; font-size: 0.85rem;">Randevu Talebini Gönder</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- WHATSAPP & SİZE NASIL YARDIMCI OLABİLİRİZ? PANELİ -->
+  <div class="whatsapp-container">
+    <div class="quick-help-panel" id="quickHelpPanel">
+      <div class="quick-help-header">
+        <h4>Size nasıl yardımcı olabiliriz?</h4>
+        <span class="quick-help-close" id="quickHelpClose">&times;</span>
+      </div>
+      <div class="quick-help-options">
+        <a href="projeler.html" class="quick-help-opt">
+          <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 21h18"></path>
+            <path d="M5 21V7l7-4 7 4v14"></path>
+            <path d="M9 10h2v2H9zM13 10h2v2h-2zM9 14h2v2H9zM13 14h2v2h-2z"></path>
+          </svg>
+          Projeleri incelemek istiyorum
+        </a>
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20projelerinin%20fiyat%20listesi%20ve%20%C3%B6deme%20se%C3%A7enekler%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="quick-help-opt">
+          <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+          </svg>
+          Fiyat bilgisi almak istiyorum
+        </a>
+        <div class="quick-help-opt btn-appointment-trigger">
+          <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Randevu oluşturmak istiyorum
+        </div>
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" target="_blank" rel="noopener noreferrer" class="quick-help-opt">
+          <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          WhatsApp'tan iletişime geç
+        </a>
+      </div>
+    </div>
+
+    <button type="button" class="quick-help-toggle-btn" id="quickHelpToggle">
+      <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true" style="width: 15px; height: 15px;">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      Size nasıl yardımcı olabiliriz?
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="WhatsApp'tan Bilgi Al">
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662a11.87 11.87 0 005.71 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whatsapp-text">WhatsApp’tan Bilgi Al</span>
+    </a>
+  </div>
+
+  <!-- =========================================================
+       SIZE UYGUN PROJEYİ BULUN (QUIZ WIZARD)
+       ========================================================= -->
+  <section class="wizard-section" id="keşfet">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
+        <div class="section-tag">Akıllı Keşif</div>
+        <h2 class="section-title">Size Uygun Yaşamı Keşfedin</h2>
+        <p style="color: var(--text-secondary); margin-top: 8px;">
+          Tercihlerinizi belirleyin, VİTREN dünyasında size en uygun projeyi keşfedin.
+        </p>
+      </div>
+
+      <div class="wizard-card">
+        <div class="wizard-progress-bar">
+          <div class="wizard-progress-fill" id="wizardProgressFill"></div>
+        </div>
+        <div id="wizardStepContent">
+          <!-- Dynamically populated by js/extensions.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       VİTREN JOURNAL (EDITORIAL ARTICLES)
+       ========================================================= -->
+  <section class="journal-section" id="journal">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div class="section-tag">Mimari & Yaşam</div>
+          <h2 class="section-title">VİTREN Journal</h2>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Modern mimari, tasarım felsefesi ve lüks gayrimenkul dünyasından editoryal yazılar.</p>
+      </div>
+
+      <div class="journal-grid">
+        <article class="journal-card">
+          <img src="assets/images/projects/reserve/reserve-hero.jpg" alt="Modern Mimari" class="journal-img" loading="lazy">
+          <div class="journal-content">
+            <span class="journal-meta">Mimari & Tasarım</span>
+            <h3 class="journal-title">Modern Mimari ve Yaşam Alanlarının Geleceği</h3>
+            <p class="journal-desc">Brüt beton, kesintisiz cam yüzeyler ve sürdürülebilir mühendislik teknikleriyle tasarlanan çağdaş konut yaklaşımı.</p>
+            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+          </div>
+        </article>
+
+        <article class="journal-card">
+          <img src="assets/images/projects/horizon/horizon-hero.jpg" alt="Bodrum Akdeniz Mimarisi" class="journal-img" loading="lazy">
+          <div class="journal-content">
+            <span class="journal-meta">Kıyı Yaşamı</span>
+            <h3 class="journal-title">Bodrum’da Akdeniz Mimarisine Çağdaş Yorum</h3>
+            <p class="journal-desc">Ege coğrafyasına saygılı, organik taş dokular ve sonsuzluk havuzlarıyla denizle bütünleşen kütlesel mimari kurgu.</p>
+            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+          </div>
+        </article>
+
+        <article class="journal-card">
+          <img src="assets/images/projects/tower/tower-hero.jpg" alt="Levent Şehir Yaşamı" class="journal-img" loading="lazy">
+          <div class="journal-content">
+            <span class="journal-meta">Şehir & Rezidans</span>
+            <h3 class="journal-title">Levent’te İkonik Kule Mimarisi ve Dikey Yaşam</h3>
+            <p class="journal-desc">Şehrin finans merkezinde yüksek tavanlar ve panoramik boğaz manzarası sunan simge rezidans projelerinin standartları.</p>
+            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- =========================================================
        JAVASCRIPT
        ========================================================= -->
   <script src="js/main.js"></script>
+  <script src="js/extensions.js"></script>
 
 </body>
 

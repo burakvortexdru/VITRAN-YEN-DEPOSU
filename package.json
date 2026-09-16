@@ -1,0 +1,14 @@
+{
+  "name": "vitren-web",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "VİTREN Premium Gayrimenkul Web Sitesi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
+}
