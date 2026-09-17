@@ -4,6 +4,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Koyu Tema Değiştirme
+  function updateNavbarLogo(isDark) {
+    const logoImgs = document.querySelectorAll('.brand-logo-img');
+    logoImgs.forEach(img => {
+      img.src = isDark ? 'assets/images/vitran beyaz png logo.png' : 'assets/images/vitran logo.png';
+    });
+  }
+
+  // Initial logo update based on theme
+  const initialDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  updateNavbarLogo(initialDark);
+
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -11,9 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDark) {
         document.documentElement.removeAttribute('data-theme');
         localStorage.setItem('vitren-theme', 'light');
+        updateNavbarLogo(false);
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('vitren-theme', 'dark');
+        updateNavbarLogo(true);
       }
     });
   }

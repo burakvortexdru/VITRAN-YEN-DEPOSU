@@ -2,7 +2,7 @@
 <html lang="tr">
 
 <head>
-  <script>(function(){try{var t=localStorage.getItem("vitren-theme");if(t==="dark"){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();</script>
+  <script>(function () { try { var t = localStorage.getItem("vitren-theme"); if (t === "dark") { document.documentElement.setAttribute("data-theme", "dark"); } } catch (e) { } })();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,8 +11,7 @@
   <meta name="description"
     content="VİTREN, ikonik mimari yaklaşımı ve zamansız estetiği bir araya getiren premium gayrimenkul projeleri sunar. Beykoz, Levent ve Bodrum'da benzersiz yaşam alanları.">
 
-  <meta name="keywords"
-    content="VİTREN, gayrimenkul, lüks rezidans, villa, mimari, İstanbul gayrimenkul, lüks konut">
+  <meta name="keywords" content="VİTREN, gayrimenkul, lüks rezidans, villa, mimari, İstanbul gayrimenkul, lüks konut">
 
   <link rel="icon" type="image/png" href="assets/images/vitran web logo küçük.png">
 
@@ -41,7 +40,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: 
+      background-image:
         linear-gradient(to right, rgba(13, 14, 18, 0.025) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(13, 14, 18, 0.025) 1px, transparent 1px);
       background-size: 80px 80px;
@@ -300,7 +299,7 @@
       border-top: 1px solid rgba(13, 14, 18, 0.08);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.14em;
@@ -328,6 +327,7 @@
         opacity: 0;
         transform: translateY(14px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -335,8 +335,13 @@
     }
 
     @keyframes heroFadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     /* RESPONSIVE DESIGN (TABLET & MOBILE) */
@@ -464,8 +469,15 @@
       <div class="header-actions">
 
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Temayı değiştir">
-          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
-          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+            </path>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
         </button>
 
         <a href="index.html#iletisim" class="btn btn-primary">
@@ -480,537 +492,525 @@
 
       </div>
 
-    </div>
   </header>
 
+  <main class="main-content">
 
-  <!-- =========================================================
+
+    <!-- =========================================================
        LUXURY PROPERTY BROCHURE & EDITORIAL HERO
        ========================================================= -->
-  <section class="hero" id="anasayfa">
-    <div class="hero-container">
+    <section class="hero" id="anasayfa">
+      <div class="hero-container">
 
-      <!-- SOL / ORTA: METİN VE MARKA İÇERİĞİ (45%) -->
-      <div class="hero-text-side">
+        <!-- SOL / ORTA: METİN VE MARKA İÇERİĞİ (45%) -->
+        <div class="hero-text-side">
 
-        <div class="hero-eyebrow">
-          <span>VİTREN REAL ESTATE</span>
-          <span>•</span>
-          <span>PREMIUM RESIDENCES</span>
-        </div>
-
-        <div class="hero-title-wrapper">
-          <h1 class="hero-title">
-            Geleceğin Mimarisinde
-            <br>
-            <span class="text-red">Yaşam Sanatı.</span>
-          </h1>
-        </div>
-
-        <p class="hero-subtitle">
-          Özgün mimari, ileri mühendislik ve seçkin yaşam alanlarını tek bir vizyonda buluşturuyoruz.
-        </p>
-
-        <div class="hero-actions">
-          <a href="projeler.html" class="btn btn-primary">
-            PROJELERİ KEŞFET
-          </a>
-
-          <a href="javascript:void(0)" onclick="openAppointmentModal()" class="btn btn-outline">
-            ÖZEL GÖRÜŞME
-          </a>
-        </div>
-
-        <!-- MINIMAL EDITORIAL PROPERTY STATS LINE -->
-        <div class="hero-stats-line">
-          <div class="hero-stat-box">
-            <span class="hero-stat-num">03</span>
-            <span class="hero-stat-txt">Aktif Proje</span>
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">
+              Geleceğin Mimarisinde
+              <br>
+              <span class="text-red">Yaşam Sanatı.</span>
+            </h1>
           </div>
 
-          <div class="hero-stat-divider"></div>
+          <p class="hero-subtitle">
+            Özgün mimari, ileri mühendislik ve seçkin yaşam alanlarını tek bir vizyonda buluşturuyoruz.
+          </p>
 
-          <div class="hero-stat-box">
-            <span class="hero-stat-num">150+</span>
-            <span class="hero-stat-txt">Yaşam Alanı</span>
+          <div class="hero-actions">
+            <a href="projeler.html" class="btn btn-primary">
+              PROJELERİ KEŞFET
+            </a>
+
+            <a href="javascript:void(0)" onclick="openAppointmentModal()" class="btn btn-outline">
+              ÖZEL GÖRÜŞME
+            </a>
           </div>
 
-          <div class="hero-stat-divider"></div>
+          <!-- MINIMAL EDITORIAL PROPERTY STATS LINE -->
+          <div class="hero-stats-line">
+            <div class="hero-stat-box">
+              <span class="hero-stat-num">03</span>
+              <span class="hero-stat-txt">Aktif Proje</span>
+            </div>
 
-          <div class="hero-stat-box">
-            <span class="hero-stat-num">03</span>
-            <span class="hero-stat-txt">Seçkin Lokasyon</span>
+            <div class="hero-stat-divider"></div>
+
+            <div class="hero-stat-box">
+              <span class="hero-stat-num">150+</span>
+              <span class="hero-stat-txt">Yaşam Alanı</span>
+            </div>
+
+            <div class="hero-stat-divider"></div>
+
+            <div class="hero-stat-box">
+              <span class="hero-stat-num">03</span>
+              <span class="hero-stat-txt">Seçkin Lokasyon</span>
+            </div>
           </div>
+
+        </div>
+
+        <!-- SAĞ: BÜYÜK MİMARİ GÖRSEL (55%) -->
+        <div class="hero-photo-wrapper">
+
+          <img src="assets/images/hero.jpg" alt="VİTREN Modern Mimari Proje" fetchpriority="high" loading="eager"
+            width="1920" height="1080">
+
+          <!-- FEATURED PROPERTY LABEL -->
+          <div class="hero-featured-card">
+            <span class="hero-featured-tag">ÖNE ÇIKAN PROJE</span>
+            <h3 class="hero-featured-title">VİTREN RESERVE</h3>
+            <div class="hero-featured-sub">BEYKOZ · İSTANBUL</div>
+            <a href="project-reserve.html" class="hero-featured-link">
+              Detayları İncele →
+            </a>
+          </div>
+
         </div>
 
       </div>
 
-      <!-- SAĞ: BÜYÜK MİMARİ GÖRSEL (55%) -->
-      <div class="hero-photo-wrapper">
-        
-        <div class="hero-photo-number">01 / 03</div>
-
-        <img src="assets/images/hero.jpg" alt="VİTREN Modern Mimari Proje" fetchpriority="high" loading="eager" width="1920" height="1080">
-
-        <!-- FEATURED PROPERTY LABEL -->
-        <div class="hero-featured-card">
-          <span class="hero-featured-tag">FEATURED PROPERTY</span>
-          <h3 class="hero-featured-title">VİTREN RESERVE</h3>
-          <div class="hero-featured-sub">BEYKOZ · İSTANBUL</div>
-          <a href="project-reserve.html" class="hero-featured-link">
-            Detayları İncele →
-          </a>
-        </div>
-
+      <!-- EDITORIAL FOOTER STRIP -->
+      <div class="hero-footer-strip">
+        <span>BEYKOZ · LEVENT · BODRUM</span>
       </div>
 
-    </div>
-
-    <!-- EDITORIAL FOOTER STRIP -->
-    <div class="hero-footer-strip">
-      <span>VİTREN · PREMIUM REAL ESTATE</span>
-      <span>BEYKOZ · LEVENT · BODRUM</span>
-      <a href="#hakkimizda">SCROLL TO EXPLORE ↓</a>
-    </div>
-
-  </section>
+    </section>
 
 
 
-  <!-- =========================================================
+    <!-- =========================================================
        TASARIM İLKELERİ
        ========================================================= -->
-  <section class="manifesto">
+    <section class="manifesto">
 
-    <div class="container">
+      <div class="container">
 
-      <div class="manifesto-grid">
+        <div class="manifesto-grid">
 
-        <div class="manifesto-text">
+          <div class="manifesto-text">
 
-          <div class="section-tag">
-            Tasarım İlkelerimiz
-          </div>
+            <div class="section-tag">
+              Tasarım İlkelerimiz
+            </div>
 
-          <h2 class="section-title">
-            Form, İşlev ve Estetiğin Kusursuz Dengesi
-          </h2>
+            <h2 class="section-title">
+              Form, İşlev ve Estetiğin Kusursuz Dengesi
+            </h2>
 
-          <p>
-            Benesta ve dünya çapındaki ikonik mimari yapılardan ilham alan
-            VİTREN; her projede şehrin dokusuna değer katan, bol doğal ışık
-            alan ve yüksek negatif alan dengesine sahip mekanlar kurgular.
-          </p>
+            <p>
+              Benesta ve dünya çapındaki ikonik mimari yapılardan ilham alan
+              VİTREN; her projede şehrin dokusuna değer katan, bol doğal ışık
+              alan ve yüksek negatif alan dengesine sahip mekanlar kurgular.
+            </p>
 
-          <div class="manifesto-quote">
-            "Biz sadece yapılar inşa etmiyoruz; zamana meydan okuyan mimari
-            heykeller ve yaşam tecrübeleri tasarlıyoruz."
+            <div class="manifesto-quote">
+              "Biz sadece yapılar inşa etmiyoruz; zamana meydan okuyan mimari
+              heykeller ve yaşam tecrübeleri tasarlıyoruz."
+            </div>
+
           </div>
 
         </div>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =========================================================
+    <!-- =========================================================
        PROJELER
        ========================================================= -->
-  <section class="projects" id="projeler">
+    <section class="projects" id="projeler">
 
-    <div class="container">
+      <div class="container">
 
-      <div class="projects-header">
+        <div class="projects-header">
 
-        <div>
+          <div>
 
-          <div class="section-tag">
-            Portföyümüz
-          </div>
-
-          <h2 class="section-title">
-            Seçkin Projeler
-          </h2>
-
-        </div>
-
-        <div class="project-filters">
-
-          <button class="filter-btn active" data-filter="all">
-            Tümü
-          </button>
-
-          <button class="filter-btn" data-filter="villa">
-            Villa
-          </button>
-
-          <button class="filter-btn" data-filter="rezidans">
-            Rezidans
-          </button>
-
-          <button class="filter-btn" data-filter="kiyi">
-            Kıyı Yaşamı
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <div class="projects-grid">
-
-        <!-- PROJECT 1 -->
-        <div class="project-card" data-category="villa" data-id="reserve">
-
-          <div class="project-img-wrapper">
-
-            <img src="assets/images/projects/reserve/reserve-hero.jpg"
-              alt="VİTREN Reserve Villa Projesi">
-
-            <div class="project-badge">
-              Satışta
+            <div class="section-tag">
+              Portföyümüz
             </div>
+
+            <h2 class="section-title">
+              Seçkin Projeler
+            </h2>
 
           </div>
 
-          <div class="project-info">
+          <div class="project-filters">
 
-            <div class="project-location">
+            <button class="filter-btn active" data-filter="all">
+              Tümü
+            </button>
 
-              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
-                <circle cx="12" cy="9" r="2.5"></circle>
-              </svg>
+            <button class="filter-btn" data-filter="villa">
+              Villa
+            </button>
 
-              <span>Beykoz, İstanbul</span>
+            <button class="filter-btn" data-filter="rezidans">
+              Rezidans
+            </button>
 
-            </div>
-
-            <h3 class="project-name">
-              VİTREN Reserve
-            </h3>
-
-            <p class="project-summary">
-              Orman manzarasında müstakil havuzlu, brüt beton ve doğal ahşap
-              detaylı ultra lüks villa kompleksi.
-            </p>
-
-            <div class="project-meta">
-
-              <div class="meta-item">
-                <span class="meta-label">Alan</span>
-                <span class="meta-value">650 m²</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Tip</span>
-                <span class="meta-value">6+2 Villa</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Teslim</span>
-                <span class="meta-value">2026</span>
-              </div>
-
-            </div>
+            <button class="filter-btn" data-filter="kiyi">
+              Kıyı Yaşamı
+            </button>
 
           </div>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
-        <div class="project-card" data-category="rezidans" data-id="tower">
+        <div class="projects-grid">
 
-          <div class="project-img-wrapper">
+          <!-- PROJECT 1 -->
+          <div class="project-card" data-category="villa" data-id="reserve">
 
-            <img src="assets/images/projects/tower/tower-hero.jpg"
-              alt="VİTREN Tower Rezidans">
+            <div class="project-img-wrapper">
 
-            <div class="project-badge">
-              Ön Satış
-            </div>
+              <img src="assets/images/projects/reserve/reserve-hero.jpg" alt="VİTREN Reserve Villa Projesi">
 
-          </div>
-
-          <div class="project-info">
-
-            <div class="project-location">
-
-              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
-                <circle cx="12" cy="9" r="2.5"></circle>
-              </svg>
-
-              <span>Levent, İstanbul</span>
-
-            </div>
-
-            <h3 class="project-name">
-              VİTREN Tower
-            </h3>
-
-            <p class="project-summary">
-              Parametrik cephe mimarisi ve 360 derece boğaz panoramasına
-              sahip simge rezidans kulesi.
-            </p>
-
-            <div class="project-meta">
-
-              <div class="meta-item">
-                <span class="meta-label">Alan</span>
-                <span class="meta-value">180-450 m²</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Tip</span>
-                <span class="meta-value">Rezidans</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Teslim</span>
-                <span class="meta-value">2027</span>
+              <div class="project-badge">
+                Satışta
               </div>
 
             </div>
 
-          </div>
+            <div class="project-info">
 
-        </div>
+              <div class="project-location">
 
-
-        <!-- PROJECT 3 -->
-        <div class="project-card" data-category="kiyi" data-id="horizon">
-
-          <div class="project-img-wrapper">
-
-            <img src="assets/images/projects/horizon/horizon-hero.jpg"
-              alt="VİTREN Horizon Kıyı Villaları">
-
-            <div class="project-badge">
-              Son 3 Ünite
-            </div>
-
-          </div>
-
-          <div class="project-info">
-
-            <div class="project-location">
-
-              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
-                <circle cx="12" cy="9" r="2.5"></circle>
-              </svg>
-
-              <span>Yalıkavak, Bodrum</span>
-
-            </div>
-
-            <h3 class="project-name">
-              VİTREN Horizon
-            </h3>
-
-            <p class="project-summary">
-              Ege denizine sıfır kayalıklarda konsol mimari teknikleriyle
-              tasarlanmış sonsuzluk havuzlu kıyı malikaneleri.
-            </p>
-
-            <div class="project-meta">
-
-              <div class="meta-item">
-                <span class="meta-label">Alan</span>
-                <span class="meta-value">520 m²</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Tip</span>
-                <span class="meta-value">Kıyı Malikanesi</span>
-              </div>
-
-              <div class="meta-item">
-                <span class="meta-label">Teslim</span>
-                <span class="meta-value">2026</span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       HAKKIMIZDA
-       ========================================================= -->
-  <section class="about" id="hakkimizda">
-
-    <div class="container">
-
-      <div class="about-grid">
-
-        <div class="about-img-container">
-
-          <div class="about-img-frame">
-
-            <img src="assets/images/about.jpg"
-              alt="VİTREN Mimarlık Stüdyosu & Ofis">
-
-          </div>
-
-          <div class="about-experience-badge">
-
-            <div class="about-exp-num">
-              15+
-            </div>
-
-            <div class="about-exp-txt">
-              Yıllık Mimari Mükemmellik
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="about-content">
-
-          <div class="section-tag">
-            Kurumsal Felsefemiz
-          </div>
-
-          <h2>
-            Geliştirdiğimiz Her Metrekarede İkonik Bir İrade
-          </h2>
-
-          <p>
-            VİTREN, gayrimenkul geliştirme süreçlerinde estetik anlayışı,
-            mühendislik disiplini ve sürdürülebilirlik vizyonunu tek bir
-            çatı altında sunar.
-          </p>
-
-          <p>
-            Amacımız sadece konut üretmek değil; içerisinde yaşamaktan gurur
-            duyulacak, nesilden nesile değerini artıran mimari başyapıtlar
-            meydana getirmektir.
-          </p>
-
-          <div class="about-pillars">
-
-            <div class="pillar-item">
-
-              <h4>
-                Zamansız Estetik
-              </h4>
-
-              <p>
-                Geçici trendlerden uzak, yıllar geçse de güncelliğini koruyan
-                mimari konseptler.
-              </p>
-
-            </div>
-
-
-            <div class="pillar-item">
-
-              <h4>
-                A-Plus Malzeme
-              </h4>
-
-              <p>
-                Dünyanın en nitelikli taş, cam ve metal alaşımlarıyla yüksek
-                dayanıklılık standartları.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       İLETİŞİM
-       ========================================================= -->
-  <section class="contact" id="iletisim">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <div class="contact-info">
-
-          <div class="section-tag">
-            Özel Danışmanlık
-          </div>
-
-          <h2>
-            VİTREN Dünyası İle Tanışın
-          </h2>
-
-          <p>
-            Projelerimiz hakkında detaylı bilgi almak, katalog talep etmek
-            veya özel sunum randevusu oluşturmak için formu doldurabilirsiniz.
-          </p>
-
-
-          <div class="contact-details">
-
-            <!-- SHOWROOM -->
-            <div class="contact-detail-item">
-
-              <div class="contact-detail-icon">
-
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M3 21h18"></path>
-                  <path d="M5 21V6l7-3 7 3v15"></path>
-                  <path d="M8 9h1"></path>
-                  <path d="M8 12h1"></path>
-                  <path d="M8 15h1"></path>
-                  <path d="M15 9h1"></path>
-                  <path d="M15 12h1"></path>
-                  <path d="M15 15h1"></path>
-                  <path d="M10 21v-3h4v3"></path>
+                <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                  <circle cx="12" cy="9" r="2.5"></circle>
                 </svg>
 
+                <span>Beykoz, İstanbul</span>
+
               </div>
 
-              <div class="contact-detail-text">
+              <h3 class="project-name">
+                VİTREN Reserve
+              </h3>
+
+              <p class="project-summary">
+                Orman manzarasında müstakil havuzlu, brüt beton ve doğal ahşap
+                detaylı ultra lüks villa kompleksi.
+              </p>
+
+              <div class="project-meta">
+
+                <div class="meta-item">
+                  <span class="meta-label">Alan</span>
+                  <span class="meta-value">650 m²</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Tip</span>
+                  <span class="meta-value">6+2 Villa</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Teslim</span>
+                  <span class="meta-value">2026</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT 2 -->
+          <div class="project-card" data-category="rezidans" data-id="tower">
+
+            <div class="project-img-wrapper">
+
+              <img src="assets/images/projects/tower/tower-hero.jpg" alt="VİTREN Tower Rezidans">
+
+              <div class="project-badge">
+                Ön Satış
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-location">
+
+                <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                  <circle cx="12" cy="9" r="2.5"></circle>
+                </svg>
+
+                <span>Levent, İstanbul</span>
+
+              </div>
+
+              <h3 class="project-name">
+                VİTREN Tower
+              </h3>
+
+              <p class="project-summary">
+                Parametrik cephe mimarisi ve 360 derece boğaz panoramasına
+                sahip simge rezidans kulesi.
+              </p>
+
+              <div class="project-meta">
+
+                <div class="meta-item">
+                  <span class="meta-label">Alan</span>
+                  <span class="meta-value">180-450 m²</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Tip</span>
+                  <span class="meta-value">Rezidans</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Teslim</span>
+                  <span class="meta-value">2027</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT 3 -->
+          <div class="project-card" data-category="kiyi" data-id="horizon">
+
+            <div class="project-img-wrapper">
+
+              <img src="assets/images/projects/horizon/horizon-hero.jpg" alt="VİTREN Horizon Kıyı Villaları">
+
+              <div class="project-badge">
+                Son 3 Ünite
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-location">
+
+                <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+                  <circle cx="12" cy="9" r="2.5"></circle>
+                </svg>
+
+                <span>Yalıkavak, Bodrum</span>
+
+              </div>
+
+              <h3 class="project-name">
+                VİTREN Horizon
+              </h3>
+
+              <p class="project-summary">
+                Ege denizine sıfır kayalıklarda konsol mimari teknikleriyle
+                tasarlanmış sonsuzluk havuzlu kıyı malikaneleri.
+              </p>
+
+              <div class="project-meta">
+
+                <div class="meta-item">
+                  <span class="meta-label">Alan</span>
+                  <span class="meta-value">520 m²</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Tip</span>
+                  <span class="meta-value">Kıyı Malikanesi</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="meta-label">Teslim</span>
+                  <span class="meta-value">2026</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+       HAKKIMIZDA
+       ========================================================= -->
+    <section class="about" id="hakkimizda">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-img-container">
+
+            <div class="about-img-frame">
+
+              <img src="assets/images/about.jpg" alt="VİTREN Mimarlık Stüdyosu & Ofis">
+
+            </div>
+
+            <div class="about-experience-badge">
+
+              <div class="about-exp-num">
+                15+
+              </div>
+
+              <div class="about-exp-txt">
+                Yıllık Mimari Mükemmellik
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-content">
+
+            <div class="section-tag">
+              Kurumsal Felsefemiz
+            </div>
+
+            <h2>
+              Geliştirdiğimiz Her Metrekarede İkonik Bir İrade
+            </h2>
+
+            <p>
+              VİTREN, gayrimenkul geliştirme süreçlerinde estetik anlayışı,
+              mühendislik disiplini ve sürdürülebilirlik vizyonunu tek bir
+              çatı altında sunar.
+            </p>
+
+            <p>
+              Amacımız sadece konut üretmek değil; içerisinde yaşamaktan gurur
+              duyulacak, nesilden nesile değerini artıran mimari başyapıtlar
+              meydana getirmektir.
+            </p>
+
+            <div class="about-pillars">
+
+              <div class="pillar-item">
 
                 <h4>
-                  Merkez Showroom
+                  Zamansız Estetik
                 </h4>
 
                 <p>
-                  Büyükdere Caddesi No: 198, Levent / İstanbul
+                  Geçici trendlerden uzak, yıllar geçse de güncelliğini koruyan
+                  mimari konseptler.
+                </p>
+
+              </div>
+
+
+              <div class="pillar-item">
+
+                <h4>
+                  A-Plus Malzeme
+                </h4>
+
+                <p>
+                  Dünyanın en nitelikli taş, cam ve metal alaşımlarıyla yüksek
+                  dayanıklılık standartları.
                 </p>
 
               </div>
 
             </div>
 
+          </div>
 
-            <!-- TELEFON -->
-            <div class="contact-detail-item">
+        </div>
 
-              <div class="contact-detail-icon">
+      </div>
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+    </section>
+
+
+    <!-- =========================================================
+       İLETİŞİM
+       ========================================================= -->
+    <section class="contact" id="iletisim">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="contact-info">
+
+            <div class="section-tag">
+              Özel Danışmanlık
+            </div>
+
+            <h2>
+              VİTREN Dünyası İle Tanışın
+            </h2>
+
+            <p>
+              Projelerimiz hakkında detaylı bilgi almak, katalog talep etmek
+              veya özel sunum randevusu oluşturmak için formu doldurabilirsiniz.
+            </p>
+
+
+            <div class="contact-details">
+
+              <!-- SHOWROOM -->
+              <div class="contact-detail-item">
+
+                <div class="contact-detail-icon">
+
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 21h18"></path>
+                    <path d="M5 21V6l7-3 7 3v15"></path>
+                    <path d="M8 9h1"></path>
+                    <path d="M8 12h1"></path>
+                    <path d="M8 15h1"></path>
+                    <path d="M15 9h1"></path>
+                    <path d="M15 12h1"></path>
+                    <path d="M15 15h1"></path>
+                    <path d="M10 21v-3h4v3"></path>
+                  </svg>
+
+                </div>
+
+                <div class="contact-detail-text">
+
+                  <h4>
+                    Merkez Showroom
+                  </h4>
+
+                  <p>
+                    Büyükdere Caddesi No: 198, Levent / İstanbul
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <!-- TELEFON -->
+              <div class="contact-detail-item">
+
+                <div class="contact-detail-icon">
+
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2
                     19.79 19.79 0 0 1-8.63-3.07
                     19.5 19.5 0 0 1-6-6
                     A19.79 19.79 0 0 1 2.12 4.18
@@ -1021,47 +1021,49 @@
                     a2 2 0 0 1 2.11-.45
                     12.84 12.84 0 0 0 2.81.7
                     A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
+                    </path>
+                  </svg>
+
+                </div>
+
+                <div class="contact-detail-text">
+
+                  <h4>
+                    VIP İletişim Hattı
+                  </h4>
+
+                  <p>
+                    +90 (536) 785 74 57
+                  </p>
+
+                </div>
 
               </div>
 
-              <div class="contact-detail-text">
 
-                <h4>
-                  VIP İletişim Hattı
-                </h4>
+              <!-- E-POSTA -->
+              <div class="contact-detail-item">
 
-                <p>
-                  +90 (536) 785 74 57
-                </p>
+                <div class="contact-detail-icon">
 
-              </div>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m3 7 9 6 9-6"></path>
+                  </svg>
 
-            </div>
+                </div>
 
+                <div class="contact-detail-text">
 
-            <!-- E-POSTA -->
-            <div class="contact-detail-item">
+                  <h4>
+                    E-Posta
+                  </h4>
 
-              <div class="contact-detail-icon">
+                  <p>
+                    vip@vitren.com.tr
+                  </p>
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <path d="m3 7 9 6 9-6"></path>
-                </svg>
-
-              </div>
-
-              <div class="contact-detail-text">
-
-                <h4>
-                  E-Posta
-                </h4>
-
-                <p>
-                  vip@vitren.com.tr
-                </p>
+                </div>
 
               </div>
 
@@ -1069,117 +1071,182 @@
 
           </div>
 
-        </div>
+
+          <!-- FORM -->
+          <div class="contact-form-wrapper">
+
+            <form id="contactForm" class="contact-form">
+
+              <div class="form-group">
+
+                <label for="fullName">
+                  Adınız Soyadınız
+                </label>
+
+                <input type="text" id="fullName" class="form-input" placeholder="Örn. Ahmet Yılmaz" required>
+
+              </div>
 
 
-        <!-- FORM -->
-        <div class="contact-form-wrapper">
+              <div class="form-group">
 
-          <form id="contactForm" class="contact-form">
+                <label for="phone">
+                  Telefon Numarası
+                </label>
 
-            <div class="form-group">
+                <input type="tel" id="phone" class="form-input" placeholder="+90 5XX XXX XX XX" required>
 
-              <label for="fullName">
-                Adınız Soyadınız
-              </label>
-
-              <input
-                type="text"
-                id="fullName"
-                class="form-input"
-                placeholder="Örn. Ahmet Yılmaz"
-                required>
-
-            </div>
+              </div>
 
 
-            <div class="form-group">
+              <div class="form-group">
 
-              <label for="phone">
-                Telefon Numarası
-              </label>
+                <label for="projectSelect">
+                  İlgilendiğiniz Proje
+                </label>
 
-              <input
-                type="tel"
-                id="phone"
-                class="form-input"
-                placeholder="+90 5XX XXX XX XX"
-                required>
+                <select id="projectSelect" class="form-input" style="cursor: pointer;" required>
 
-            </div>
+                  <option value="" disabled selected>
+                    Proje Seçiniz
+                  </option>
 
+                  <option value="reserve">
+                    VİTREN Reserve (Beykoz)
+                  </option>
 
-            <div class="form-group">
+                  <option value="tower">
+                    VİTREN Tower (Levent)
+                  </option>
 
-              <label for="projectSelect">
-                İlgilendiğiniz Proje
-              </label>
+                  <option value="horizon">
+                    VİTREN Horizon (Bodrum)
+                  </option>
 
-              <select
-                id="projectSelect"
-                class="form-input"
-                style="cursor: pointer;"
-                required>
+                  <option value="general">
+                    Genel Bilgi Almak İstiyorum
+                  </option>
 
-                <option value="" disabled selected>
-                  Proje Seçiniz
-                </option>
+                </select>
 
-                <option value="reserve">
-                  VİTREN Reserve (Beykoz)
-                </option>
-
-                <option value="tower">
-                  VİTREN Tower (Levent)
-                </option>
-
-                <option value="horizon">
-                  VİTREN Horizon (Bodrum)
-                </option>
-
-                <option value="general">
-                  Genel Bilgi Almak İstiyorum
-                </option>
-
-              </select>
-
-            </div>
+              </div>
 
 
-            <div class="form-group">
+              <div class="form-group">
 
-              <label for="message">
-                Notunuz / Mesajınız
-              </label>
+                <label for="message">
+                  Notunuz / Mesajınız
+                </label>
 
-              <textarea
-                id="message"
-                class="form-input"
-                placeholder="Randevu saati tercihinizi veya sorularınızı iletebilirsiniz..."></textarea>
+                <textarea id="message" class="form-input"
+                  placeholder="Randevu saati tercihinizi veya sorularınızı iletebilirsiniz..."></textarea>
 
-            </div>
+              </div>
 
 
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style="width: 100%;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
 
-              VIP Randevu Talebi Gönder
-              <span class="btn-arrow">→</span>
+                VIP Randevu Talebi Gönder
+                <span class="btn-arrow">→</span>
 
-            </button>
+              </button>
 
-          </form>
+            </form>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
 
+    <!-- =========================================================
+       SIZE UYGUN PROJEYİ BULUN (QUIZ WIZARD)
+       ========================================================= -->
+    <section class="wizard-section" id="keşfet">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
+          <div class="section-tag">Akıllı Keşif</div>
+          <h2 class="section-title">Size Uygun Yaşamı Keşfedin</h2>
+          <p style="color: var(--text-secondary); margin-top: 8px;">
+            Tercihlerinizi belirleyin, VİTREN dünyasında size en uygun projeyi keşfedin.
+          </p>
+        </div>
+
+        <div class="wizard-card">
+          <div class="wizard-progress-bar">
+            <div class="wizard-progress-fill" id="wizardProgressFill"></div>
+          </div>
+          <div id="wizardStepContent">
+            <!-- Dynamically populated by js/extensions.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       VİTREN JOURNAL (EDITORIAL ARTICLES)
+       ========================================================= -->
+    <section class="journal-section" id="journal">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div class="section-tag">Mimari & Yaşam</div>
+            <h2 class="section-title">VİTREN Journal</h2>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Modern mimari, tasarım felsefesi ve lüks gayrimenkul
+            dünyasından editoryal yazılar.</p>
+        </div>
+
+        <div class="journal-grid">
+          <article class="journal-card">
+            <img src="assets/images/projects/reserve/reserve-hero.jpg" alt="Modern Mimari" class="journal-img"
+              loading="lazy">
+            <div class="journal-content">
+              <span class="journal-meta">Mimari & Tasarım</span>
+              <h3 class="journal-title">Modern Mimari ve Yaşam Alanlarının Geleceği</h3>
+              <p class="journal-desc">Brüt beton, kesintisiz cam yüzeyler ve sürdürülebilir mühendislik teknikleriyle
+                tasarlanan çağdaş konut yaklaşımı.</p>
+              <a href="javascript:void(0)"
+                onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')"
+                style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+            </div>
+          </article>
+
+          <article class="journal-card">
+            <img src="assets/images/projects/horizon/horizon-hero.jpg" alt="Bodrum Akdeniz Mimarisi" class="journal-img"
+              loading="lazy">
+            <div class="journal-content">
+              <span class="journal-meta">Kıyı Yaşamı</span>
+              <h3 class="journal-title">Bodrum’da Akdeniz Mimarisine Çağdaş Yorum</h3>
+              <p class="journal-desc">Ege coğrafyasına saygılı, organik taş dokular ve sonsuzluk havuzlarıyla denizle
+                bütünleşen kütlesel mimari kurgu.</p>
+              <a href="javascript:void(0)"
+                onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')"
+                style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+            </div>
+          </article>
+
+          <article class="journal-card">
+            <img src="assets/images/projects/tower/tower-hero.jpg" alt="Levent Şehir Yaşamı" class="journal-img"
+              loading="lazy">
+            <div class="journal-content">
+              <span class="journal-meta">Şehir & Rezidans</span>
+              <h3 class="journal-title">Levent’te İkonik Kule Mimarisi ve Dikey Yaşam</h3>
+              <p class="journal-desc">Şehrin finans merkezinde yüksek tavanlar ve panoramik boğaz manzarası sunan simge
+                rezidans projelerinin standartları.</p>
+              <a href="javascript:void(0)"
+                onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')"
+                style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- =========================================================
        FOOTER
@@ -1194,10 +1261,7 @@
 
           <a href="index.html" class="footer-logo-wrapper">
 
-            <img
-              src="assets/images/vitran beyaz png logo.png"
-              alt="VİTREN Logo"
-              class="footer-logo-img">
+            <img src="assets/images/vitran beyaz png logo.png" alt="VİTREN Logo" class="footer-logo-img">
 
           </a>
 
@@ -1317,7 +1381,7 @@
         </p>
 
         <p>
-          MARKI LABS Web Design & Development
+          MARKI LABS Web Tasarım & Geliştirme
         </p>
 
       </div>
@@ -1341,13 +1405,11 @@
       </div>
 
       <div class="section-tag" id="modalLocation">
-        Location
+        Lokasyon
       </div>
 
-      <h2
-        id="modalTitle"
-        style="font-size: 2rem; color: var(--text-primary); margin-bottom: 0.75rem;">
-        Project Title
+      <h2 id="modalTitle" style="font-size: 2rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+        Proje Başlığı
       </h2>
 
 
@@ -1355,40 +1417,31 @@
 
         <div>
 
-          <img
-            id="modalImg"
-            src=""
-            alt="Proje Görseli"
-            class="modal-img">
+          <img id="modalImg" src="" alt="Proje Görseli" class="modal-img">
 
         </div>
 
 
         <div>
 
-          <p
-            id="modalDesc"
+          <p id="modalDesc"
             style="color: var(--text-secondary); margin-bottom: 1.25rem; font-weight: 400; line-height: 1.6;">
-            Description...
+            Açıklama...
           </p>
 
 
           <div
             style="background: var(--bg-section-alt); padding: 1.25rem; border-radius: 4px; border: 1px solid var(--border-light); margin-bottom: 1.25rem;">
 
-            <div
-              style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.75rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.75rem;">
 
               <div>
 
-                <span
-                  style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
+                <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
                   Yapı Tipi
                 </span>
 
-                <p
-                  id="modalType"
-                  style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">
+                <p id="modalType" style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">
                   -
                 </p>
 
@@ -1397,14 +1450,11 @@
 
               <div>
 
-                <span
-                  style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
+                <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
                   Büyüklük
                 </span>
 
-                <p
-                  id="modalArea"
-                  style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">
+                <p id="modalArea" style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">
                   -
                 </p>
 
@@ -1415,14 +1465,11 @@
 
             <div>
 
-              <span
-                style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
+              <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
                 Tahmini Teslim
               </span>
 
-              <p
-                id="modalDelivery"
-                style="font-weight: 600; color: var(--color-brand-red); font-size: 0.9rem;">
+              <p id="modalDelivery" style="font-weight: 600; color: var(--color-brand-red); font-size: 0.9rem;">
                 -
               </p>
 
@@ -1439,9 +1486,7 @@
           <ul id="modalSpecsList"></ul>
 
 
-          <a
-            href="index.html#iletisim"
-            class="btn btn-primary"
+          <a href="index.html#iletisim" class="btn btn-primary"
             onclick="document.getElementById('projectModal').classList.remove('active'); document.body.style.overflow='auto';"
             style="width: 100%; margin-top: 1.25rem; text-align: center;">
 
@@ -1465,31 +1510,39 @@
       <div class="appointment-header">
         <div>
           <h3 style="margin: 0; font-size: 1.25rem;">Randevu Talebi Oluştur</h3>
-          <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: var(--text-muted);">Size en uygun seçenekleri görüşmek için randevu talebinizi oluşturun.</p>
+          <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: var(--text-muted);">Size en uygun seçenekleri görüşmek
+            için randevu talebinizi oluşturun.</p>
         </div>
         <span class="appointment-close" id="appointmentClose">&times;</span>
       </div>
 
       <form id="centralAppointmentForm" class="appointment-body" style="padding: 1.5rem 2rem;">
-        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div class="form-row-2col"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Ad Soyad *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Ad Soyad *</label>
             <input type="text" class="form-input" id="appntName" required placeholder="Ahmet Yılmaz">
           </div>
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Telefon *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Telefon *</label>
             <input type="tel" class="form-input" id="appntPhone" required placeholder="0532 000 00 00">
           </div>
         </div>
 
         <div class="form-group" style="margin-bottom: 1rem;">
-          <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">E-posta *</label>
+          <label class="form-label"
+            style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">E-posta *</label>
           <input type="email" class="form-input" id="appntEmail" required placeholder="ahmet@example.com">
         </div>
 
-        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div class="form-row-2col"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">İlgilendiğiniz Proje *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">İlgilendiğiniz Proje
+              *</label>
             <select class="form-input" id="appntProject" required>
               <option value="Genel VİTREN Bilgilendirme">Genel VİTREN Bilgilendirme</option>
               <option value="VİTREN Reserve — Beykoz">VİTREN Reserve — Beykoz</option>
@@ -1498,7 +1551,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Görüşme Türü *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Görüşme Türü *</label>
             <select class="form-input" id="appntType" required>
               <option value="Merkez Showroom">Merkez Showroom</option>
               <option value="Online Görüşme">Online Görüşme</option>
@@ -1507,13 +1561,16 @@
           </div>
         </div>
 
-        <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div class="form-row-2col"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Tarih *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Tarih *</label>
             <input type="date" class="form-input" id="appntDate" required>
           </div>
           <div class="form-group">
-            <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Saat *</label>
+            <label class="form-label"
+              style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Saat *</label>
             <select class="form-input" id="appntTime" required>
               <option value="09:00">09:00</option>
               <option value="09:30">09:30</option>
@@ -1537,22 +1594,31 @@
         </div>
 
         <div class="form-group" style="margin-bottom: 1.2rem;">
-          <label class="form-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Notunuz</label>
-          <textarea class="form-input" id="appntNote" rows="2" placeholder="Varsa eklemek istediğiniz özel istek veya sorularınız..."></textarea>
+          <label class="form-label"
+            style="font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block;">Notunuz</label>
+          <textarea class="form-input" id="appntNote" rows="2"
+            placeholder="Varsa eklemek istediğiniz özel istek veya sorularınız..."></textarea>
         </div>
 
         <div class="form-group" style="margin-bottom: 1.2rem;">
-          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: var(--text-secondary); cursor: pointer;">
+          <label
+            style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: var(--text-secondary); cursor: pointer;">
             <input type="checkbox" id="appntKvkk" required style="margin-top: 2px;">
-            <span>Randevu talebim kapsamında verdiğim iletişim bilgilerimin benimle iletişime geçilmesi amacıyla kullanılmasını kabul ediyorum. *</span>
+            <span>Randevu talebim kapsamında verdiğim iletişim bilgilerimin benimle iletişime geçilmesi amacıyla
+              kullanılmasını kabul ediyorum. *</span>
           </label>
         </div>
 
-        <div id="appntStatusMsg" style="display: none; margin-bottom: 1rem; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500;"></div>
+        <div id="appntStatusMsg"
+          style="display: none; margin-bottom: 1rem; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">
+        </div>
 
-        <div style="display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
-          <button type="button" class="btn btn-outline" id="appntCancelBtn" style="padding: 8px 18px; font-size: 0.85rem;">İptal</button>
-          <button type="submit" class="btn btn-primary" id="appntSubmitBtn" style="padding: 8px 24px; font-size: 0.85rem;">Randevu Talebini Gönder</button>
+        <div
+          style="display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+          <button type="button" class="btn btn-outline" id="appntCancelBtn"
+            style="padding: 8px 18px; font-size: 0.85rem;">İptal</button>
+          <button type="submit" class="btn btn-primary" id="appntSubmitBtn"
+            style="padding: 8px 24px; font-size: 0.85rem;">Randevu Talebini Gönder</button>
         </div>
       </form>
     </div>
@@ -1574,7 +1640,8 @@
           </svg>
           Projeleri incelemek istiyorum
         </a>
-        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20projelerinin%20fiyat%20listesi%20ve%20%C3%B6deme%20se%C3%A7enekler%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="quick-help-opt">
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%20projelerinin%20fiyat%20listesi%20ve%20%C3%B6deme%20se%C3%A7enekler%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+          target="_blank" rel="noopener noreferrer" class="quick-help-opt">
           <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7.01" y2="7"></line>
@@ -1590,9 +1657,12 @@
           </svg>
           Randevu oluşturmak istiyorum
         </div>
-        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" target="_blank" rel="noopener noreferrer" class="quick-help-opt">
+        <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F"
+          target="_blank" rel="noopener noreferrer" class="quick-help-opt">
           <svg class="quick-help-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
           </svg>
           WhatsApp'tan iletişime geç
         </a>
@@ -1609,88 +1679,17 @@
     </button>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="WhatsApp'tan Bilgi Al">
+    <a href="https://wa.me/905383933557?text=Merhaba%2C%20V%C4%B0TREN%E2%80%99in%20projeleri%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20ve%20uygun%20se%C3%A7enekler%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%20Bilgi%20verebilir%20misiniz%3F"
+      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp'tan Bilgi Al">
       <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662a11.87 11.87 0 005.71 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662a11.87 11.87 0 005.71 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
       </svg>
       <span class="whatsapp-text">WhatsApp’tan Bilgi Al</span>
     </a>
   </div>
 
-  <!-- =========================================================
-       SIZE UYGUN PROJEYİ BULUN (QUIZ WIZARD)
-       ========================================================= -->
-  <section class="wizard-section" id="keşfet">
-    <div class="container">
-      <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
-        <div class="section-tag">Akıllı Keşif</div>
-        <h2 class="section-title">Size Uygun Yaşamı Keşfedin</h2>
-        <p style="color: var(--text-secondary); margin-top: 8px;">
-          Tercihlerinizi belirleyin, VİTREN dünyasında size en uygun projeyi keşfedin.
-        </p>
-      </div>
 
-      <div class="wizard-card">
-        <div class="wizard-progress-bar">
-          <div class="wizard-progress-fill" id="wizardProgressFill"></div>
-        </div>
-        <div id="wizardStepContent">
-          <!-- Dynamically populated by js/extensions.js -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       VİTREN JOURNAL (EDITORIAL ARTICLES)
-       ========================================================= -->
-  <section class="journal-section" id="journal">
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
-        <div>
-          <div class="section-tag">Mimari & Yaşam</div>
-          <h2 class="section-title">VİTREN Journal</h2>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Modern mimari, tasarım felsefesi ve lüks gayrimenkul dünyasından editoryal yazılar.</p>
-      </div>
-
-      <div class="journal-grid">
-        <article class="journal-card">
-          <img src="assets/images/projects/reserve/reserve-hero.jpg" alt="Modern Mimari" class="journal-img" loading="lazy">
-          <div class="journal-content">
-            <span class="journal-meta">Mimari & Tasarım</span>
-            <h3 class="journal-title">Modern Mimari ve Yaşam Alanlarının Geleceği</h3>
-            <p class="journal-desc">Brüt beton, kesintisiz cam yüzeyler ve sürdürülebilir mühendislik teknikleriyle tasarlanan çağdaş konut yaklaşımı.</p>
-            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
-          </div>
-        </article>
-
-        <article class="journal-card">
-          <img src="assets/images/projects/horizon/horizon-hero.jpg" alt="Bodrum Akdeniz Mimarisi" class="journal-img" loading="lazy">
-          <div class="journal-content">
-            <span class="journal-meta">Kıyı Yaşamı</span>
-            <h3 class="journal-title">Bodrum’da Akdeniz Mimarisine Çağdaş Yorum</h3>
-            <p class="journal-desc">Ege coğrafyasına saygılı, organik taş dokular ve sonsuzluk havuzlarıyla denizle bütünleşen kütlesel mimari kurgu.</p>
-            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
-          </div>
-        </article>
-
-        <article class="journal-card">
-          <img src="assets/images/projects/tower/tower-hero.jpg" alt="Levent Şehir Yaşamı" class="journal-img" loading="lazy">
-          <div class="journal-content">
-            <span class="journal-meta">Şehir & Rezidans</span>
-            <h3 class="journal-title">Levent’te İkonik Kule Mimarisi ve Dikey Yaşam</h3>
-            <p class="journal-desc">Şehrin finans merkezinde yüksek tavanlar ve panoramik boğaz manzarası sunan simge rezidans projelerinin standartları.</p>
-            <a href="javascript:void(0)" onclick="alert('VİTREN Journal makalesinin tamamı çok yakında yayında olucaktır.')" style="color: var(--color-brand-red); font-size: 0.8rem; font-weight: 700;">Devamını Oku →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- =========================================================
        JAVASCRIPT

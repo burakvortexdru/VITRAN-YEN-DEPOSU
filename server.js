@@ -84,79 +84,16 @@ const server = http.createServer((req, res) => {
     req.on('end', async () => {
       try {
         const data = JSON.parse(body || '{}');
-        const apiKey = process.env.RESEND_API_KEY;
-        const receiverEmail = process.env.APPOINTMENT_RECEIVER_EMAIL || 'burakduru1025@gmail.com';
-
-        if (!apiKey || apiKey.includes('placeholder')) {
-          res.writeHead(500, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ 
-            success: false, 
-            message: 'Resend API anahtarı henüz tanımlanmamış. Lütfen .env dosyasında RESEND_API_KEY değerini kontrol ediniz.' 
-          }));
-          return;
-        }
-
-        const isTestMail = data.isTestMail === true;
-        const emailSubject = isTestMail ? 'VİTREN — Randevu Sistemi Test Maili' : `VİTREN — Yeni Randevu Talebi (${data.name || 'Genel'})`;
-
-        const htmlContent = isTestMail 
-          ? `<h2>VİTREN Randevu Sistemi</h2><p>Bu bir test e-postasıdır.</p><p>Randevu sistemi üzerinden başarılı şekilde gönderilmiştir.</p>`
-          : `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e5e7eb; border-radius: 8px;">
-            <h2 style="color: #d3121d;">VİTREN — Yeni Randevu Talebi</h2>
-            <p><strong>Ad Soyad:</strong> ${escapeHtml(data.name)}</p>
-            <p><strong>Telefon:</strong> ${escapeHtml(data.phone)}</p>
-            <p><strong>E-Posta:</strong> ${escapeHtml(data.email)}</p>
-            <p><strong>İlgilenilen Proje:</strong> ${escapeHtml(data.project)}</p>
-            <p><strong>Görüşme Türü:</strong> ${escapeHtml(data.type)}</p>
-            <p><strong>Talep Edilen Tarih:</strong> ${escapeHtml(data.date)}</p>
-            <p><strong>Talep Edilen Saat:</strong> ${escapeHtml(data.time)}</p>
-            <p><strong>Not:</strong> ${escapeHtml(data.note || '-')}</p>
-            <p><strong>Kaynak Sayfa:</strong> ${escapeHtml(data.sourceUrl || '-')}</p>
-            <p><strong>Kaynak Proje:</strong> ${escapeHtml(data.sourceProject || '-')}</p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
-            <p style="font-size: 12px; color: #888;">Bu e-posta VİTREN web sitesi randevu formu üzerinden oluşturulmuştur.</p>
-          </div>`;
-
-        const emailPayload = JSON.stringify({
-          from: 'onboarding@resend.dev',
-          to: [receiverEmail],
-          replyTo: data.email || undefined,
-          subject: emailSubject,
-          html: htmlContent
-        });
-
-        const reqOptions = {
-          hostname: 'api.resend.com',
-          path: '/emails',
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-            'Content-Length': Buffer.byteLength(emailPayload)
+        if (!data.isTestMail) {
+          try {
+            const { saveAppointment } = await import('./api/db.js');
+            saveAppointment(data);
+          } catch (dbErr) {
+            console.error('Failed to persist appointment:', dbErr);
           }
-        };
-
-        const resendReq = https.request(reqOptions, (resendRes) => {
-          let resendBody = '';
-          resendRes.on('data', chunk => { resendBody += chunk; });
-          resendRes.on('end', () => {
-            if (resendRes.statusCode >= 200 && resendRes.statusCode < 300) {
-              res.writeHead(200, { 'Content-Type': 'application/json' });
-              res.end(JSON.stringify({ success: true, message: 'Randevu talebiniz başarıyla alındı.', data: JSON.parse(resendBody) }));
-            } else {
-              res.writeHead(resendRes.statusCode, { 'Content-Type': 'application/json' });
-              res.end(JSON.stringify({ success: false, message: `Resend API Error (${resendRes.statusCode}): ${resendBody}` }));
-            }
-          });
-        });
-
-        resendReq.on('error', (err) => {
-          res.writeHead(500, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ success: false, message: 'Resend API bağlantı hatası: ' + err.message }));
-        });
-
-        resendReq.write(emailPayload);
-        resendReq.end();
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, message: 'Randevu talebiniz başarıyla alındı.' }));
       } catch (err) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, message: 'Geçersiz istek gövdesi.' }));
